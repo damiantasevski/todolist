@@ -1,0 +1,18 @@
+﻿@model TaskViewModel
+
+<div class="task-item mb-4 d-flex flex-column align-items-start justify-content-between border p-3 rounded shadow-sm">
+    <div class="mb-3 w-100">
+        <label asp-for="Name" class="form-label">Task Name</label>
+        <input asp-for="Name" class="form-control bg-light" readonly/>
+    </div>
+    <div class="mb-3 w-100">
+        <label asp-for="Description" class="form-label">Description</label>
+        <textarea asp-for="Description" class="form-control bg-light" rows="4" readonly></textarea>
+    </div>
+    <div class="mb-3 d-flex align-items-center w-100">
+        <label asp-for="IsDone" class="form-label mr-4">Is Done</label>
+        <div class="form-check form-check-lg">
+            <input asp-for="IsDone" type="checkbox" class="form-check-input" disabled/>
+        </div>
+    </div>
+</div>
